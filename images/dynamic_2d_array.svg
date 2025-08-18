@@ -1,0 +1,100 @@
+
+<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+            refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+    </marker>
+  </defs>
+
+  <style>
+    .box { fill: white; stroke: black; stroke-width: 1; }
+    .label { font-family: monospace; font-size: 12px; dominant-baseline: middle; text-anchor: middle; }
+    .fragment { opacity: 1; } /* visible by default for browser preview */
+  </style>
+
+  <!-- arr[i] boxes -->
+  <g class="fragment" data-fragment-index="0">
+    
+    <rect x="40" y="30" width="80" height="30" class="box"/>
+    <text x="80.0" y="45.0" class="label">arr[0]</text>
+    
+    <rect x="40" y="100" width="80" height="30" class="box"/>
+    <text x="80.0" y="115.0" class="label">arr[1]</text>
+    
+    <rect x="40" y="170" width="80" height="30" class="box"/>
+    <text x="80.0" y="185.0" class="label">arr[2]</text>
+    
+    <rect x="40" y="240" width="80" height="30" class="box"/>
+    <text x="80.0" y="255.0" class="label">arr[3]</text>
+    
+  </g>
+
+  <!-- arrows -->
+  <g class="fragment" data-fragment-index="1">
+    
+    <line x1="120" y1="45.0" x2="140" y2="45.0" stroke="black" marker-end="url(#arrowhead)" />
+    
+    <line x1="120" y1="115.0" x2="140" y2="115.0" stroke="black" marker-end="url(#arrowhead)" />
+    
+    <line x1="120" y1="185.0" x2="140" y2="185.0" stroke="black" marker-end="url(#arrowhead)" />
+    
+    <line x1="120" y1="255.0" x2="140" y2="255.0" stroke="black" marker-end="url(#arrowhead)" />
+    
+  </g>
+
+  <!-- array rows -->
+  
+    <g class="fragment" data-fragment-index="2">
+      
+        <rect x="150" y="30" width="70" height="30" class="box"/>
+        <text x="185.0" y="45.0" class="label">arr[0][0]</text>
+        
+        <rect x="220" y="30" width="70" height="30" class="box"/>
+        <text x="255.0" y="45.0" class="label">arr[0][1]</text>
+        
+        <rect x="290" y="30" width="70" height="30" class="box"/>
+        <text x="325.0" y="45.0" class="label">arr[0][2]</text>
+        
+    </g>
+    
+    <g class="fragment" data-fragment-index="3">
+      
+        <rect x="150" y="100" width="70" height="30" class="box"/>
+        <text x="185.0" y="115.0" class="label">arr[1][0]</text>
+        
+        <rect x="220" y="100" width="70" height="30" class="box"/>
+        <text x="255.0" y="115.0" class="label">arr[1][1]</text>
+        
+        <rect x="290" y="100" width="70" height="30" class="box"/>
+        <text x="325.0" y="115.0" class="label">arr[1][2]</text>
+        
+    </g>
+    
+    <g class="fragment" data-fragment-index="4">
+      
+        <rect x="150" y="170" width="70" height="30" class="box"/>
+        <text x="185.0" y="185.0" class="label">arr[2][0]</text>
+        
+        <rect x="220" y="170" width="70" height="30" class="box"/>
+        <text x="255.0" y="185.0" class="label">arr[2][1]</text>
+        
+        <rect x="290" y="170" width="70" height="30" class="box"/>
+        <text x="325.0" y="185.0" class="label">arr[2][2]</text>
+        
+    </g>
+    
+    <g class="fragment" data-fragment-index="5">
+      
+        <rect x="150" y="240" width="70" height="30" class="box"/>
+        <text x="185.0" y="255.0" class="label">arr[3][0]</text>
+        
+        <rect x="220" y="240" width="70" height="30" class="box"/>
+        <text x="255.0" y="255.0" class="label">arr[3][1]</text>
+        
+        <rect x="290" y="240" width="70" height="30" class="box"/>
+        <text x="325.0" y="255.0" class="label">arr[3][2]</text>
+        
+    </g>
+    
+</svg>
