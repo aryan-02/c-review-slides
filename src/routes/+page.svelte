@@ -532,7 +532,7 @@ while(n > 1)
 		</Transition>
 	</Slide>
 	<Slide class="h-full place-content-center place-items-center">
-		<video class="h-[85vh]" controls muted  src="{base}/videos/fibonacci_demo.mp4"></video>
+		<video type="video/mp4" class="h-[85vh]" controls muted  src="{base}/video type="video/mp4"s/fibonacci_demo.mp4"></video type="video/mp4">
 	</Slide>
 	<Slide animate class="h-full place-content-center place-items-center">
 		<h1>Expressions vs Statements</h1>
@@ -726,7 +726,7 @@ int ***z = &y; // pointer to pointer to pointer to int`} />
 		</Transition>
 	</Slide>
 	<Slide class="h-full place-content-center place-items-center">
-		<video class="h-[85vh]" controls muted  src="{base}/videos/pointer_dereference_demo.mp4"></video>
+		<video type="video/mp4" class="h-[85vh]" controls muted  src="{base}/video type="video/mp4"s/pointer_dereference_demo.mp4"></video type="video/mp4">
 	</Slide>
 	<Slide class="h-full place-content-center place-items-center">
 		<Transition visible>
@@ -848,7 +848,7 @@ int main(void)
 	</Slide>
 	<Slide class="h-full place-content-center place-items-center">
 		<h1>Structures 🏢</h1>
-		<video class="h-[85vh]" controls muted  src="{base}/videos/structs_demo.mp4"></video>
+		<video type="video/mp4" class="h-[85vh]" controls muted  src="{base}/video type="video/mp4"s/structs_demo.mp4"></video type="video/mp4">
 	</Slide>
 	<Slide class="h-full place-content-center place-items-center">
 		<h1>Dynamic Memory Allocation</h1>
@@ -859,7 +859,7 @@ int main(void)
 		<p class="m-4 px-30">All memory allocated using these functions must be freed using <span class="ccode">free()</span>. Failing to do so produces a memory leak.</p>
 	</Slide>
 	<Slide class="h-full place-content-center place-items-center">
-		<video class="h-[85vh]" controls muted  src="{base}/videos/dynamic_array_demo.mp4"></video>
+		<video type="video/mp4" class="h-[85vh]" controls muted  src="{base}/video type="video/mp4"s/dynamic_array_demo.mp4"></video type="video/mp4">
 	</Slide>
 	<Slide class="h-full place-content-center place-items-center">
 		<h1>Dereferencing with Arrays</h1>
@@ -1104,11 +1104,11 @@ int main(void)
 	</Slide>
 	<Slide class="h-full place-items-center place-content-center">
 		<h1>Redirection: Output Demo</h1>
-		<video class="h-[83vh]" controls muted  src="{base}/videos/output_redirection_demo.mp4"></video>
+		<video type="video/mp4" class="h-[83vh]" controls muted  src="{base}/video type="video/mp4"s/output_redirection_demo.mp4"></video type="video/mp4">
 	</Slide>
 	<Slide class="h-full place-items-center place-content-center">
 		<h1>Redirection: Input Demo</h1>
-		<video class="h-[83vh]" controls muted  src="{base}/videos/input_redirection_demo.mp4"></video>
+		<video type="video/mp4" class="h-[83vh]" controls muted  src="{base}/video type="video/mp4"s/input_redirection_demo.mp4"></video type="video/mp4">
 	</Slide>
 	<Slide animate class="h-full place-items-center place-content-center text-left">
 		<h1>Matching Expected Outputs and Diff</h1>
@@ -1206,7 +1206,7 @@ print_array(myArray, 3, 6);
 	</Slide>
 	<Slide class="h-full place-items-center place-content-center">
 		<h1>Reverse Debugging</h1>
-		<video class="h-[85vh]" controls muted  src="{base}/videos/reverse_debugging_demo.mp4"></video>
+		<video type="video/mp4" class="h-[85vh]" controls muted  src="{base}/video type="video/mp4"s/reverse_debugging_demo.mp4"></video type="video/mp4">
 	</Slide>
 	<Slide animate class="h-full place-items-center place-content-center">
 		<h1>Common Errors</h1>
