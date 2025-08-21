@@ -18,6 +18,7 @@
 	let code_function: ReturnType<typeof Code>
 	let code_array_iter: ReturnType<typeof Code>
 	let code_structs: ReturnType<typeof Code>
+	let code_ptrarray: ReturnType<typeof Code>
 </script>
 
 <Presentation
@@ -1055,6 +1056,104 @@ int main(void)
 				`}
 			</div>
 		</div>
+	</Slide>
+	<Slide class="h-full place-items-center place-content-center">
+		<h1 class="p-3">Strings</h1>
+		<Transition>
+			<p class="mx-6 my-4">C does not (really) have a built-in string data type.</p>
+		</Transition>
+		<Transition>
+			<p class="mx-6 my-4">Instead, we have arrays of characters.</p>
+		</Transition>
+		<Transition>
+			<p class="mx-6 my-4">Strings in C are just character arrays that end with the null terminator.</p>
+		</Transition>
+		<Transition>
+			<div class="code-container"><Code lang="c" theme="andromeeda" code={`char myString[] = "Texas";`} /></div>
+		</Transition>
+		<Transition>
+			<div class="code-container"><Code lang="c" theme="andromeeda" code={`char myString[] = {'T', 'e', 'x', 'a', 's', '\\0'};`} /></div>
+		</Transition>
+		<Transition>
+			<p class="mx-6 my-4"><span class="ccode">printf</span> with <span class="ccode">%s</span> and other string functions stop when they see '\0'.</p>
+		</Transition>
+	</Slide>
+	<Slide class="h-full place-items-center place-content-center">
+		<h1 class="p-3">What data type is this? 🤔</h1>
+		<p class="mx-6 my-9 ccode">char *var[6];</p>
+		<Transition>
+			<p class="mx-6 my-9">It's an array of pointers!</p>
+		</Transition>
+		<Transition class="flex">
+			<div class="code-container">
+				<Code lang="c" theme="andromeeda" autoIndent={false} code={`char *cities[] = {"Arlington", "Dallas", "Fort Worth", "Dalworthington Gardens", "Pantego"};
+printf("%s\\n", cities[1]); // Prints Dallas
+printf("%s\\n", cities[2]); // Prints Fort Worth`} />
+			</div>
+		</Transition>
+	</Slide>
+	<Slide animate class="h-full place-items-center place-content-center">
+		<h1 class="p-3">Passing Pointer Arrays</h1>
+		<Code bind:this={code_ptrarray} lang="c" theme="andromeeda" options={{lineNumbers: true}} code={`#include <stdio.h>
+
+void printCities(char *cities[], int numberOfCities)
+{
+    for(int i = 0; i < numberOfCities; i++)
+    {
+        printf("%s\\n", cities[i]);
+    }
+}
+
+int main(void)
+{
+    char *myCities[] = {"Arlington", "Dallas", "Fort Worth", "Dalworthington Gardens", "Pantego"};
+    printCities(myCities, 6);
+    return 0;
+}`} />
+
+		<Action do={() => code_ptrarray.update`#include <stdio.h>
+
+void printCities(char *cities[])
+{
+    for(int i = 0; cities[i][0] != '\\0'; i++)
+    {
+        printf("%s\\n", cities[i]);
+    }
+}
+
+int main(void)
+{
+    char *myCities[] = {"Arlington", "Dallas", "Fort Worth", "Dalworthington Gardens", "Pantego", ""};
+    printCities(myCities);
+    return 0;
+}`} 
+
+			undo = {() => code_ptrarray.update`#include <stdio.h>
+
+void printCities(char *cities[], int numberOfCities)
+{
+    for(int i = 0; i < numberOfCities; i++)
+    {
+        printf("%s\\n", cities[i]);
+    }
+}
+
+int main(void)
+{
+    char *myCities[] = {"Arlington", "Dallas", "Fort Worth", "Dalworthington Gardens", "Pantego"};
+    printCities(myCities, 6);
+    return 0;
+}`} />
+	</Slide>
+	<Slide class="h-full place-items-center place-content-center">
+		<h1>Command-Line Arguments</h1>
+		<p class="mx-6 my-9">Command-Line Arguments are passed to the main function as a pointer array.</p>
+		<p class="mx-6 my-9">To use command-line arguments, use this signature for the main function</p>
+		<Code lang="c" theme="andromeeda" code={`int main(int argc, char *argv[])`} />
+	</Slide>
+	<Slide class="h-full place-items-center place-content-center">
+		<h1>Command-Line Arguments</h1>
+		<img src="images/commandline_args.png" alt="Command Line Arguments in C Demo" class="w-auto h-[80vh]">
 	</Slide>
 	<Slide class="h-full place-items-center place-content-center">
 		<h1>UNIX Review and Debugging</h1>
